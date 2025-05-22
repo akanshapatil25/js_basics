@@ -68,4 +68,5 @@ myarr2.unshift(10); //appends value at start
 //slice will not include the last range and dosent modify the og array
 //splice will include last ele and modifies the og array by removing the portion mentioned
 
+//for while and do while loops to iterate over elements
 
