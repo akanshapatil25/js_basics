@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Number Checker</title>
+  <style>
+    body {
+      padding: 31px;
+    }
+    #result {
+      margin-top: 18px;
+      font-size: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Check Number Type</h2>
+
+  <label for="numberInput">Enter a number:</label>
+  <input  id="Input" />
+
+  <button id="checkBtn">Check</button>
+
+  <div id="result"></div>
+
+  <script>
+    const numberInput = document.getElementById('Input');
+    const checkBtn = document.getElementById('checkBtn');
+    const result = document.getElementById('result');
+
+    checkBtn.addEventListener('click', checkNumber);
+
+    function checkNumber() {
+      const num = parseInt(numberInput.value);//allows only int and if strings then NaN
+
+      if (isNaN(num)) {
+        result.textContent = "Please enter a valid number";
+      } else if (num % 2 == 0) {
+        result.textContent = num + " is a even number";
+      } else if (num % 2 != 0) {
+        result.textContent = num + " is a odd number";
+      }else {
+        result.textContent = "Please enter a valid number";
+      }
+    }
+  </script>
+
+</body>
+</html>

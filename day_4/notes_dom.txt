@@ -1,0 +1,32 @@
+Document Object Model (DOM) is a programming interface for HTML and XML documents.
+It represents the structure of a web page as a tree of objects that can be modified using JavaScript.
+
+on top of the heirarchy we have window -> document -> is split 2 ways head and body
+
+and head and body are split into various divs or paragraphs(which are porvided with names) basically attributes
+
+                                            
+document.getElementById()
+takes one element by its id and eturns the first element with the matching id
+
+document.getElementsByClassName
+takes multiple elements by class name and returns an HTMLCollection (it is like array but not the same)
+
+
+getAttribute(attributeName)
+gets the value of the specified attribute from an HTML element.
+
+we can also set attribute in this way
+
+we also have a way of accesing style
+document.style 
+document.title.style.color = "blue";
+
+helps us in modifying the style of a text or paragraph
+
+
+event listner
+a function awaiting for a certain action to occur so that the fucntion code can be executed
+
+element.addEventListener('eventType', functionToRun);
+element is basically the html element that will get effected by an event that occurs like click,mousover etc. 
