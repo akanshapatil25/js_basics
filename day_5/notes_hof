@@ -1,0 +1,77 @@
+What is a Higher-Order Function (HOF)?
+basically a function that takes one or more functions as arguments and returns another function.
+
+function greet(cb) {
+  cb();
+}
+function sayHi() {
+  console.log("Hi!");
+}
+greet(sayHi);
+
+
+
+higher-order Array Methods
+
+
+1. map():Transforms each element and returns a new array
+[1, 2, 3].map(n => n * 2);
+
+2. filter():Returns a new array with elements that pass a condition
+[1, 2, 3, 4].filter(n => n % 2 === 0); 
+
+3. reduce():Reduces the array to a single value.
+[1, 2, 3].reduce((acc, curr) => acc + curr, 0); 
+
+4. forEach():Performs an action on each array element (no return).
+[1, 2, 3].forEach(n => console.log(n));
+
+5. find():Returns the first element matching a condition.
+[1, 2, 3].find(n => n > 1); // 2
+
+
+
+different ways hof is implemented:
+
+Function Composition
+
+Combines multiple functions together in the below case first double woll get implemented and then add on results of double.
+const add = x => x + 1;
+const double = x => x * 2;
+const composed = x => add(double(x)); 
+
+Currying
+
+converts function with multiple arguments into chained functions.
+function multiply(x) {
+  return function(y) {
+    return x * y;
+  };
+}
+multiply(2)(3); 
+
+
+
+
+
+
+different ways hofs are used
+
+
+Passing Functions as Arguments
+
+function greet(name, cb) {
+  console.log("Hello, " + name);
+  cb();
+}
+ Returning Functions
+
+function mulBy(factor) {
+  return function(num) {
+    return num * factor;
+  };
+}
+const double = mulBy(2);
+double(5); // 10
+
+
