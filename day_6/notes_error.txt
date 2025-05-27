@@ -1,0 +1,50 @@
+
+types of wrror
+1. SyntaxError
+   - Occurs when code violates JavaScript syntax rules.
+
+2. ReferenceError
+   - Accessing a variable that is not defined.
+  
+
+3. TypeError
+   - Performing an operation on the wrong data type.
+   
+
+4. RangeError
+   - Value out of an acceptable range.(similar to arrayoutofboundserror)
+  
+5. Custom Error
+   - You define your own error with `throw`.
+ 
+
+
+
+- Syntax for try catch block:
+  try {
+    code which has error
+  } catch (error) {
+    // handling error
+  } finally {
+    // always runs regardless of error being there or not
+  }
+
+
+
+we can do debugging by the following:
+
+1. Console Logging
+   console.log("Checking value:", value);
+
+2. Browser DevTools
+   - Use breakpoints in Chrome DevTools.
+   - Step through code using F10 (Step Over).
+
+3. Debugger Keyword
+   - Pauses code execution in dev tools.
+   debugger;
+
+4. Use Try/Catch Around Async Functions
+ 
+
+
